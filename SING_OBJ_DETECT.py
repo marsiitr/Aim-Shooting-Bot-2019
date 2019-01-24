@@ -1,11 +1,24 @@
 import numpy as np 
 import cv2
 
-#import serial
-#ser=serial.Serial('/dev/ttyACM0',9600)
+import serial
+ser=serial.Serial('/dev/ttyACM0',9600)
+
+#ls -l /dev/ttyACM*
+#sudo chmod a+rw /dev/dev/ttyACM0 
+
+def reverse(xx):
+    k=''
+    for x in range(len(xx)):
+        k=k+xx[len(xx)-x-1]
+    return k
+
+import numpy as np 
+import cv2
+
 #
-cap=cv2.VideoCapture(1)
-visibility=0.1
+cap=cv2.VideoCapture(0)
+visibility=0.05
 
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
@@ -89,15 +102,23 @@ while True:
         cx=int(np.sum(np.multiply((x+1),mx))/np.sum(mx))
         cy=int(np.sum(np.multiply((y+1),my))/np.sum(my))
         frame=cv2.circle(frame,(cx,cy),10,(0,0,255),-1)
-        angle_y=str(int(np.arctan((center[0]-cx)*0.0007)))
-        angle_x=str(int(np.arctan((cy-center[1])*0.0008)))
-        #ret_value=angle_x+'/'+angle_y
-        #ser.write(ret_value.encode())
+        angle_x=str(int(np.arctan((320-cx)*0.000756)*180/3.14)+90)
+        angle_y=str(int(np.arctan((cy-240)*0.000808)*180/3.14)+90)
+        angle_x=reverse(angle_x)
+        angle_y=reverse(angle_y)
+        
+        ret_value=angle_x+'/'+angle_y+'/'
+        for k in ret_value:
+            ser.write(k.encode())
+        
         
         
     else:
         frame=cv2.putText(frame,'Nothing present',(center[0]-100,center[1]-100),font,1,(0,255,0),1,cv2.LINE_AA)
+        ret_value=None
     
+
+        
     
     frame=cv2.circle(frame,(center[1],center[0]),10,(255,0,0),-1)
     
@@ -105,8 +126,8 @@ while True:
     cv2.imshow('background',background)
     cv2.imshow('foreground',foreground)
     #cv2.imshow('bar',bar)
-    
-    #print(ret_value)
+    print(ret_value)
+ 
     
     if cv2.waitKey(1)==27:
         break
