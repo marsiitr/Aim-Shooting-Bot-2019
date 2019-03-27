@@ -26,15 +26,18 @@ The alternatives also work well but were discarded given the resources.
 We made automatic "Shooting Bot" as a open project of MARS. It identifies the target, and the gun moves with the target once it aims at target. We have used deep learning for image proccessing and steppers for for precise and acccurate motion of the gun. The basic purpose of the bot is to avoid any human intrution in no man land. It can be considered as a prototype for our defence system and its actual version with heavy machine guns and snipers can be deployed at the disturbing international borders which are cause of casualties of our soldiers. Hence,we can attack enemy while protecting our soldiers. 
 
 
-### Images 
+### Images:
+![](Img_Video/images/img_1.jpeg)
+![](Img_Video/images/img_2.jpeg)
+  
+  
+More Images and Videos in the Folder Img_Video itself.
 
 ### Abstract:
 We made automatic "Shooting Bot" as a open project of MARS. It identifies the target, and the gun moves with the target once it aims at target. We have used deep learning for image proccessing and steppers for for precise and acccurate motion of the gun. The basic purpose of the bot is to avoid any human intrution in no man land. It can be considered as a prototype for our defence system and its actual version with heavy machine guns and snipers can be deployed at the disturbing international borders which are cause of casualties of our soldiers. Hence,we can attack enemy while protecting our soldiers. 
 
-
-
 ### Motivation:
-
+Many iterations of this project can be seen in fictional stories/movies such as James Bond, etc. Considering it to be fairly simple, it was decided to showcase a model such as this in the Hobbies Club Exhibition. The initial brainstorming  showed us that this was a complicated project as independent motion of the gun and the accurate detection of the target in any background, couldn't be solved by simple mechanics and OpenCV respectively. This further motivated us to make this concept a reality.
 
 ### Mechanical Aspect:
 The Mechanical Design comprises of two portions - The gun movement mechanism and the gun reloading mechanism.
