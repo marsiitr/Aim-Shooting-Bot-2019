@@ -57,7 +57,6 @@ The electronic design uses arduino mega for controlling. One motor was used for 
 Apart from that as all the image processing was done on Laptop a USB-TTL converter was used and attached to arduino for proper communication.
 
 ### Cost Structure:
-S.no.        Item                         Cost
 1.        Arduino Mega                      700  
 2.        Stepper Motor                    5500  
 3.        Cytron Motor Driver              2000  
