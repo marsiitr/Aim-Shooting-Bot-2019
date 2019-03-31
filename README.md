@@ -27,9 +27,7 @@ We made automatic "Shooting Bot" as a open project of MARS. It identifies the ta
 
 
 ### Images:
-![](Img_Video/images/img_1.jpeg)
-![](Img_Video/images/img_2.jpeg)
-  
+![](Img_Video/images/img_1.jpeg)  
   
 More Images and Videos in the Folder Img_Video itself.
 
@@ -45,6 +43,11 @@ The Gun Movement Mechanism - This further is divided into two parts - Lower and 
 The Lower Part - This has a Stepper Motor and a Lazy Suzan Bearing, whose arrangement can be seen in the 3d model. This Part gives the gun a rotational freedom namely Yaw. We tried to use DC motor with encoder but to make that work was far more difficult and complicated. Issues we had were mainly the Encoder's inability to respond to small angles.
 The Upper Part - This part is different than how we designed it to how we implemented it. The design was to provide the gun another rotational movement namely pitch. A proper implementation could not have been possible at that time so we proceeded with the gun just attached to the lower part with the help of an aluminium structure thus giving it necessary elevation.
 The Gun Reloading Mechanism - This was accomplished by lead screw mechanism as that was the only mechanism which was powerful enough to reload the gun. This mechanism is completely designed according to the gun's dimension. A 900 RPM Johnson Geared Motor was used to make the process fast and reliable. Also to pull the trigger, a small servo motor was used.
+  
+Image of the solidwork for gun reload design:  
+
+![](Img_Video/images/img_4.jpeg)  
+
 
 ### Electronic Aspect:
 It uses tensorflow object-detection API to do the same.So it is easily possible to aim for 100 different classes as given in the API. It makes the model robust to changes as per the type of object which it should aim irrespective of the surrounding.
@@ -54,33 +57,46 @@ The electronic design uses arduino mega for controlling. One motor was used for 
 Apart from that as all the image processing was done on Laptop a USB-TTL converter was used and attached to arduino for proper communication.
 
 ### Cost Structure:
-The following project is a little costly to fabricate. In addition to the basic materials, Aluminium square channels and wood, the cost of Stepper Motor and DC Motor were significant. Other expenses include - Toy Gun, Servo Motor and occasional 3D prints. While on the Electronics side, Motor Drivers and Arduino add to the cost. Most of the motors, boards used were available in the section, which helped to build the project in a relatively cheap amount.
+S.no.        Item                         Cost
+1.        Arduino Mega                      700  
+2.        Stepper Motor                    5500  
+3.        Cytron Motor Driver              2000  
+4.        L298n MotorDriver                 160  
+5.        Servo Motor(MG995)                300  
+6.        DC Motor(900rpm Jhonson Geared)   800  
+7.        LiPo Batteries(x2)               2200  
+8.        WebCam                            400  
+9.        Toy Gun                           500   
+10.        Misc. Parts                     2500   
+
+#### Total- 15,060
 
 ### Applications:
-It can be deployed at larger scales for border security that is to say in defense applications. As the model is robust to surroundings and can detect any out of 100 different classes it makes it better for use in Defense applications.
+1. It can be deployed at larger scales for border security that is to say in defense applications.  
+2. As the model is robust to surroundings and can detect any out of 100 different classes it makes it better for use in Defense applications.
 
 ### Limitations:
-The only limitation is that it has no optical locking mechanism that is to say that it doesnt work properly if it has more than one object of interest in its frame. 
-
+1. The only limitation is that it has no optical locking mechanism that is to say that it doesnt work properly if it has more than one object of interest in its frame.
+ 
 ### Future Improvements:
-Better tuning of the PID.
-Using Optical Flow for target locking.
-Better mechanical design to make it more appealing.
+1. Better tuning of the PID.  
+2. Using Optical Flow for target locking.  
+3. Better mechanical design to make it more appealing.  
 
 ### Team Members:
-Abhishek Agarwal
-Aditya Kanfade
-Aditya Raj
-Jatin Varshney
+1. Abhishek Agarwal  
+2. Aditya Kanfade   
+3. Aditya Raj   
+4. Jatin Varshney  
 
 ### Mentors:
-Prashant
+1. Prashant
 
 ### References:
-Tensorflow object Detection-API.  
+1.  Tensorflow object Detection-API.  
 https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
 
-Sample model for mechanical structure.  
+2.  Sample model for mechanical structure.  
 https://www.youtube.com/watch?v=HoRPWUl_sF8
 
 ### References:
